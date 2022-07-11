@@ -15,13 +15,6 @@ public class 문자찾기1 {
                 answer++;
             }
         }
-
-
-//        for (int i = 0; i < str.length(); i++) {
-//            if (str.charAt(i) == t) {
-//                answer++;
-//            }
-//        }
         return answer;
     }
 
