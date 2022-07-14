@@ -3,7 +3,7 @@ package 문자열;
 import java.util.Scanner;
 
 public class 문자열압축11X {
-    static String solution(String str) {
+    public static String solution(String str) {
         String answer = "";
         int count = 1;
         str += " "; //빈문자열을 넣어줘야 맨 마지막값 구할 수 있음.
@@ -24,7 +24,7 @@ public class 문자열압축11X {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
+        String str = sc.next();
         System.out.println(solution(str));
     }
 }
