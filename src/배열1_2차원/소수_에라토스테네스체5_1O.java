@@ -2,7 +2,7 @@ package 배열1_2차원;
 
 import java.util.Scanner;
 
-public class 소수_에라토스테네스체5_1 {
+public class 소수_에라토스테네스체5_1O {
     static int solution(int n) {
         int answer = 0;
         int[] arr = new int[n + 1];
