@@ -1,4 +1,4 @@
-package 자료구조;
+package 자료구조_스택_큐;
 
 import java.util.Scanner;
 import java.util.Stack;
