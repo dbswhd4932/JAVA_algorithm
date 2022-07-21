@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class 가위바위보3O {
     static String soultion(int n, int[] a, int[] b) {
         String answer = "";
-        int aCnt = 0;
-        int bCnt = 0;
 
         for (int i = 0; i < n; i++) {
             if (a[i] == b[i]) {

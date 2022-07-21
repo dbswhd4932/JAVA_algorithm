@@ -2,16 +2,19 @@ package 문자열;
 
 import java.util.Scanner;
 
-public class 대소문자변환2B {
+public class 대소문자변환2_완료 {
 
     public static String solution(String str) {
         String answer = "";
-        for (char x : str.toCharArray() ) {
-            if(Character.isLowerCase(x)){
-                answer += Character.toUpperCase(x);
+
+        char[] c = str.toCharArray();
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] >= 'A' && 'Z' >= c[i]) {
+                c[i] = (char) (c[i] + 32);
             } else {
-                answer += Character.toLowerCase(x);
+                c[i] = (char) (c[i] - 32);
             }
+            answer += c[i];
         }
         return answer;
     }

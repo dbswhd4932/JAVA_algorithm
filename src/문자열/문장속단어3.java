@@ -2,19 +2,18 @@ package 문자열;
 
 import java.util.Scanner;
 
-public class 문장속단어3P {
+public class 문장속단어3 {
 
     public static String solution(String str) {
-
         String answer = "";
-        String[] strArr = str.split(" ");
+        String[] s = str.split(" ");
 
         int max = 0;
-        for (String s : strArr) {
-            int len = s.length();
-            if(len > max) {
+        for (String x : s) {
+            int len = x.length();
+            if (max < len) {
                 max = len;
-                answer = s;
+                answer = x;
             }
         }
         return answer;
