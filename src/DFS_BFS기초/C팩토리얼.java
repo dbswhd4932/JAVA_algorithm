@@ -1,6 +1,6 @@
 package DFS_BFS기초;
 
-public class 팩토리얼 {
+public class C팩토리얼 {
     static int DFS(int n ){
         int answer =0;
 

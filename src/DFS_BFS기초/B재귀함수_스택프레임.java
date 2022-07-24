@@ -1,6 +1,6 @@
 package DFS_BFS기초;
 
-public class 재귀함수_스택프레임 {
+public class B재귀함수_스택프레임 {
     static void DFS(int n) {
 
         // **** 스택의 상단이 작동한다 ****

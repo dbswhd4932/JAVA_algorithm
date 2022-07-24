@@ -2,15 +2,14 @@ package 문자열;
 
 import java.util.Scanner;
 
-public class 회전문자열7A {
-    public static String solution(String str) {
+public class 팰린드롬8 {
+    public static String solution(String s) {
         String answer = "YES";
-        str = str.toUpperCase();
-        int len = str.length();
-        for (int i = 0; i < len/2; i++) {
-            if(str.charAt(i) != str.charAt(len-i-1)) {
+        s = s.toUpperCase().replaceAll("[^A-Z]","");
+
+        for (int i = 0; i < s.length()/2; i++) {
+            if(s.charAt(i) != s.charAt(s.length()-i-1)) {
                 answer = "NO";
-                break;
             }
         }
         return answer;
@@ -20,5 +19,6 @@ public class 회전문자열7A {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         System.out.println(solution(str));
+
     }
 }

@@ -2,7 +2,7 @@ package 문자열;
 
 import java.util.Scanner;
 
-public class 문장속단어3 {
+public class 문장속단어3_완료 {
 
     public static String solution(String str) {
         String answer = "";
