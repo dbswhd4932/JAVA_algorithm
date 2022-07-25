@@ -1,6 +1,6 @@
 package DFS_BFS기초;
 
-public class B이진수출력_재귀 {
+public class B이진수출력_재귀_완료 {
     static void DFS(int n) {
 
         if (n == 0) return;

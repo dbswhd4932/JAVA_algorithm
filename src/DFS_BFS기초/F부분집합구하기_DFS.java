@@ -19,7 +19,8 @@ public class F부분집합구하기_DFS {
 
         } else {
             ch[L] = 1;
-            DFS(L + 1); // 왼쪽 사용한다
+            DFS(L +
+                    1); // 왼쪽 사용한다
             ch[L] = 0;
             DFS(L + 1); // 오른쪽 사용안한다
         }
