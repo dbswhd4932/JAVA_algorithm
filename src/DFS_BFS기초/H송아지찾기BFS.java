@@ -15,9 +15,9 @@ public class H송아지찾기BFS {
         ch = new int[100001];
         ch[s] = 1; //첫번째 지점
         Q.offer(s);
-        int L = 0;
+        int L = 0; //레벨값
         while (!Q.isEmpty()) {
-            int len = Q.size();
+            int len = Q.size(); // 사이즈만큼 반복해야 노드자식을 알수 있다.
             for (int i = 0; i < len; i++) {
                 int x = Q.poll();
 
