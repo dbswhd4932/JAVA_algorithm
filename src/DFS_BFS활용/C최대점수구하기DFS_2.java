@@ -4,37 +4,38 @@ import java.util.Scanner;
 
 public class C최대점수구하기DFS_2 {
 
-    static int n;
-    static int m;
-    static int answer;
+    static int n; // 문제개수
+    static int m; // 제한시간
+    static int[] score; // 문제당 점수
+    static int[] time; // 문제당 시간
+    static int anwer; // 정답
 
-    public static void DFS(int depth, int sum, int time, int[] ms, int[] mt) {
+    public static void DFS(int depth, int sum, int time, int[] sc, int[] st) {
         if (depth == n) {
-            for (int i = 0; i < n; i++) {
-                if (time > m) return;
-                answer = Math.max(answer , sum);
-            }
-        }
-        else {
-            DFS(depth + 1, sum + ms[depth], time + mt[depth], ms, mt);
-            DFS(depth + 1, sum, time, ms, mt);
+            if(time > m ) return;
+            anwer = Math.max(anwer , sum);
+
+        } else {
+            DFS(depth + 1, sum + sc[depth], time + st[depth], sc, st);
+            DFS(depth + 1, sum, time, sc, st);
         }
     }
-
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
 
-        int[] score = new int[n];
-        int[] solutionTime = new int[n];
+        score = new int[n];
+        time = new int[n];
 
         for (int i = 0; i < n; i++) {
             score[i] = sc.nextInt();
-            solutionTime[i] = sc.nextInt();
+            time[i] = sc.nextInt();
         }
-        DFS(0, 0, 0, score, solutionTime);
-        System.out.println(answer);
+
+        DFS(0,0,0,score,time);
+        System.out.println(anwer);
+
     }
 }

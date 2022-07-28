@@ -2,14 +2,14 @@ package DFS_BFS활용;
 
 import java.util.Scanner;
 
-public class D중복순열구하기DFS {
+public class D중복순열구하기DFS_3 {
 
-    //1부터 N까지 번호가 적힌 구슬이 있습니다.
-    // 이 중 중복을 허락하여 M번을 뽑아 일렬로 나열하는 방법을 모두 출력합니다
+    static int n; // 1~n까지의 자연수
+    static int m; // m개 뽑기
     static int [] arr;
 
-    public static void DFS(int depth , int n , int m ){
-        if(depth == m) {
+    public static void DFS(int depth, int n , int m) {
+        if(depth == m ){
             for (int i = 0; i < m; i++) {
                 System.out.print(arr[i] + " ");
             }
@@ -18,7 +18,7 @@ public class D중복순열구하기DFS {
         else {
             for (int i = 1; i <= n; i++) {
                 arr[depth] = i;
-                DFS(depth+1, n,m);
+                DFS(depth+1 ,n ,m );
             }
         }
     }
@@ -31,7 +31,9 @@ public class D중복순열구하기DFS {
         int m = sc.nextInt();
 
         arr = new int [m];
-        DFS(0,n,m);
+
+        DFS(0 ,n, m);
+
 
     }
 }
