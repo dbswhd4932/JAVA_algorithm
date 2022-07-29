@@ -17,6 +17,7 @@ public class I조합구하기 {
         }
         else {
             for (int i = a; i <= n; i++) {
+
                 arr[depth] = i;
                 DFS(depth+1, i+1);
             }
